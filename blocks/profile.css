@@ -78,6 +78,9 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .profile__add-btn:hover {

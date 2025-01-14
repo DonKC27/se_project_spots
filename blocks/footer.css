@@ -9,5 +9,8 @@
   color: #212121;
   opacity: 70%;
   margin: 0;
-  height: 16px;
+}
+
+.copyright {
+  margin: 0;
 }

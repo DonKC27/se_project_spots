@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 420px;
 }
 
 .profile__name {
@@ -56,15 +57,14 @@
   padding: 0;
   font-size: 16px;
   line-height: 16px;
-  opacity: 100%;
+  opacity: 70%;
   color: #212121;
   font-weight: 500;
 }
 
 .profile__edit-btn:hover {
   cursor: pointer;
-  color: #212121;
-  opacity: 70%;
+  opacity: 100%;
 }
 
 .profile__add-btn {
@@ -81,10 +81,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  opacity: 100%;
 }
 
 .profile__add-btn:hover {
   cursor: pointer;
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
@@ -120,10 +122,14 @@
   .profile__edit-btn {
     gap: 8px;
     margin-right: 0;
+    place-self: center;
   }
 
   .profile__add-btn {
     margin: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
   }
 }

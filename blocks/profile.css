@@ -129,5 +129,6 @@
     margin: 0;
     width: 100%;
     gap: 8px;
+    justify-content: center;
   }
 }

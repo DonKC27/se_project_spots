@@ -41,7 +41,7 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  const cardElement = cardTemplate.textContent
+  const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
 

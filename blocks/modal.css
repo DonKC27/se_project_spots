@@ -24,6 +24,7 @@
   width: 100%;
   position: relative;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .modal__close-btn {
@@ -37,6 +38,11 @@
   justify-content: center;
   background: none;
   border: none;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+  opacity: 100%;
 }
 
 .modal__title {
@@ -64,6 +70,10 @@
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {

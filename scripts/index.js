@@ -66,17 +66,17 @@ function handleEditProfileSubmit(evt) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  const inputValues = { name: cardNameInput, link: cardLinkInput };
+
+  const inputValues = {
+    name: cardNameInput.value,
+    link: cardLinkInput.value,
+  };
+
   const cardEl = getCardElement(inputValues);
 
-  const imageEl = document.createElement("img");
-  imageEl.src = inputValues.link;
-  imageEl.alt = inputValues.name;
-
-  const cardImageEl = cardEl.querySelector(".card__image");
-  cardImageEl.appendChild(imageEl);
-
   cardsList.prepend(cardEl);
+
+  closeModal(cardModal);
 }
 
 function getCardElement(data) {
@@ -86,13 +86,12 @@ function getCardElement(data) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
 
   cardTitleEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  // select the element
-  // add the event listener
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
@@ -102,6 +101,10 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
     previewModalCAptionEl.textContent = data.name;
     openModal(previewModal);
+  });
+
+  cardDeleteBtn.addEventListener("click", () => {
+    cardElement.remove();
   });
 
   return cardElement;

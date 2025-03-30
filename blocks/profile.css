@@ -87,6 +87,7 @@
 .profile__add-btn:hover {
   cursor: pointer;
   opacity: 80%;
+  background-image: url();
 }
 
 @media screen and (max-width: 627px) {

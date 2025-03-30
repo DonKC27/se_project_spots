@@ -76,6 +76,9 @@ function handleAddCardSubmit(evt) {
 
   cardsList.prepend(cardEl);
 
+  cardNameInput.value = "";
+  cardLinkInput.value = "";
+
   closeModal(cardModal);
 }
 

@@ -9,26 +9,27 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   visibility: hidden;
   padding: 0 10px;
   transition: visibility 0.3s, opacity 0.3s ease-in;
+  opacity: 0;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__content {
-  background-color: transparent;
   padding: 32px 50px 32px;
   max-width: 730px;
   width: 100%;
   position: relative;
   box-sizing: border-box;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .modal__content_type_preview {
@@ -37,6 +38,7 @@
   height: 661px;
   top: 81px;
   border-radius: 8px;
+  background-color: transparent;
 }
 
 .modal__caption {
@@ -50,7 +52,7 @@
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  font-family: "Poppins";
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal__image {
@@ -92,7 +94,7 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal__label {
@@ -107,6 +109,7 @@
   padding: 16px 12px;
   border-radius: 8px;
 }
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 32px;
@@ -127,7 +130,6 @@
 
   .modal__content {
     padding: 12px;
-    background-color: transparent;
   }
 
   .modal__image {
@@ -144,6 +146,9 @@
   .modal__close {
     width: 40px;
     height: 40px;
+    top: -30px;
+    right: 48px;
+    position: absolute;
   }
 
   .modal__label {

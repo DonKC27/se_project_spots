@@ -15,6 +15,7 @@
   padding: 0 10px;
   transition: visibility 0.3s, opacity 0.3s ease-in;
   opacity: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal_is-opened {
@@ -58,7 +59,7 @@
 .modal__image {
   width: 100%;
   object-fit: contain;
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   border-radius: 8px;
   background-color: transparent;
@@ -116,6 +117,7 @@
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal__submit-btn:hover {
@@ -138,16 +140,25 @@
     border-radius: 4px;
   }
 
+  .modal__caption {
+    width: 95px;
+    height: 19px;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
   .modal__title {
     font-size: 20px;
     margin: 10px 0 34px;
+    width: 93px;
+    height: 20px;
   }
 
   .modal__close {
     width: 40px;
     height: 40px;
-    top: -30px;
-    right: 48px;
+    top: 23px;
+    right: 5px;
     position: absolute;
   }
 

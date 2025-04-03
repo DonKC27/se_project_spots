@@ -43,7 +43,7 @@
 }
 
 .modal__caption {
-  width: 135px;
+  display: inline-block;
   top: 750px;
   left: 497px;
   border-radius: 8px;
@@ -67,8 +67,8 @@
 
 .modal__close {
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 30px;
+  right: 40px;
   width: 40px;
   height: 40px;
   opacity: 40%;
@@ -134,14 +134,7 @@
     padding: 12px;
   }
 
-  .modal__image {
-    top: 89px;
-    left: 16px;
-    border-radius: 4px;
-  }
-
   .modal__caption {
-    width: 95px;
     height: 19px;
     font-size: 16px;
     line-height: 120%;
@@ -157,13 +150,27 @@
   .modal__close {
     width: 40px;
     height: 40px;
-    top: 23px;
+    top: 10px;
     right: 5px;
     position: absolute;
   }
 
   .modal__label {
     margin-bottom: 24px;
+  }
+
+  .modal__close_type_preview {
+    top: -40px;
+    right: -10px;
+  }
+
+  .modal__content_type_preview {
+    padding: 0;
+  }
+  .modal__image {
+    max-width: 413px;
+    left: 16px;
+    border-radius: 4px;
   }
 
   .modal__submit-btn {

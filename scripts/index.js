@@ -63,7 +63,6 @@ function handleEditProfileSubmit(evt) {
   profileDescriptionEl.textContent = descriptionInput.value;
   closeModal(editModal);
 }
-
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -73,11 +72,12 @@ function handleAddCardSubmit(evt) {
   };
 
   const cardEl = getCardElement(inputValues);
-
   cardsList.prepend(cardEl);
 
-  cardNameInput.value = "";
-  cardLinkInput.value = "";
+  cardForm.reset();
+
+  const submitButton = cardForm.querySelector(settings.submitButtonSelector);
+  disableButton(submitButton, settings);
 
   closeModal(cardModal);
 }
@@ -116,6 +116,8 @@ function getCardElement(data) {
 editModalBtn.addEventListener("click", () => {
   nameInput.value = profileNameEl.textContent;
   descriptionInput.value = profileDescriptionEl.textContent;
+  //OPTIONAL
+  resetValidation(editForm, [nameInput, descriptionInput], settings);
   openModal(editModal);
 });
 editModalCloseBtn.addEventListener("click", () => {
@@ -140,3 +142,5 @@ initialCards.forEach((item) => {
   const cardEl = getCardElement(item);
   cardsList.append(cardEl);
 });
+
+enableValidation(settings);

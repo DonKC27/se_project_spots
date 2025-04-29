@@ -50,6 +50,15 @@ const previewModalCloseBtn = previewModal.querySelector(".modal__close");
 const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
 
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal.modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -143,4 +152,10 @@ initialCards.forEach((item) => {
   cardsList.append(cardEl);
 });
 
-enableValidation(settings);
+[editModal, cardModal, previewModal].forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});

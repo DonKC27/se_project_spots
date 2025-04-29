@@ -47,16 +47,16 @@
 }
 
 .card__like-button_liked {
-  background-image: url(/images/NewLikedButton.svg);
+  background-image: url(../images/NewLikedButton.svg);
   opacity: 1;
 }
 
 .card__like-button_liked:hover {
-  background-image: url(/images/LikedHover.svg);
+  background-image: url(../images/LikedHover.svg);
 }
 
 .card__delete-btn {
-  background-image: url(/images/defaultTrash.svg);
+  background-image: url(../images/defaultTrash.svg);
   width: 32px;
   height: 32px;
   top: 10px;

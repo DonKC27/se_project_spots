@@ -112,15 +112,18 @@
 .modal__input {
   padding: 16px 12px;
   border-radius: 8px;
-  margin: 0px;
+  margin: 0;
   color: #212121;
-  opacity: 40%;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  font-size: 20px;
   line-height: 100%;
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 .modal__input:hover {
-  opacity: 100%;
+  border-color: rgba(33, 33, 33, 0.6); /* Adjust opacity according to Figma */
+  cursor: pointer;
 }
 
 .modal__input_type_error {
@@ -140,6 +143,14 @@
 .modal__submit-btn:hover {
   cursor: pointer;
   opacity: 80%;
+}
+
+.modal__submit-btn_disabled {
+  background-color: #212121;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 50%;
+  pointer-events: none;
 }
 
 .modal__error {
@@ -174,6 +185,7 @@
     margin: 10px 0 34px;
     width: 93px;
     height: 20px;
+    white-space: nowrap;
   }
 
   .modal__close {
